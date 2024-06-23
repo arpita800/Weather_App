@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background-color: #343a40;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .sidebar {
+      background-color: #343a40;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar-heading {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .nav-link {
+      color: #fff !important;
+    }
+    .nav-link:hover {
+      color: #ccc !important;
+    }
+    .card {
+      background-color: #fff;
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .main-content {
+      padding-left: 20px; /* Adjust as needed */
+    }
+    .section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.feedback-counts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-item {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feedback-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item i {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.feedback-item p {
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+.feedback-item span {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #343a40;
+}
+
+.section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 50%; 
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a href="#" class="navbar-brand logo">Weather Now Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="container-fluid py-4">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-md-3 sidebar mb-4 ">
+        <h2 class="sidebar-heading">Menu</h2>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/dashboard">
+              <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/UsersList">
+              <i class="fas fa-users mr-2"></i> Users
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/WeatherList">
+              <i class="fas fa-sun mr-2"></i> Weather Data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/FeedbackList">
+              <i class="fas fa-comments mr-2"></i> Feedbacks
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main content area -->
+      <div class="col-md-9 main-content">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Dashboard Overview</h2>
+            <p class="card-text">Welcome to the Weather Now admin dashboard. Here you can manage users and view weather data.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Card 1: Total Users -->
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-users"></i> Total Users</h5>
+                <p class="card-text">{{ users.length }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Weather Data -->
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-sun"></i> Weather Data</h5>
+                <p class="card-text">{{ weatherData.length }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Feedbacks -->
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-comments"></i> Feedbacks</h5>
+                <p class="card-text">{{ feedbacks.length }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="mb-4">Feedback Counts</h2>
+          <div class="feedback-counts">
+              <div class="feedback-item">
+                  <i class="fas fa-thumbs-down fa-2x"></i>
+                  <p>Poor Ratings (1-2): <span>{{ poorCount }}</span></p>
+              </div>
+              <div class="feedback-item">
+                  <i class="fas fa-meh fa-2x"></i>
+                  <p>Average Ratings (3-4): <span>{{ averageCount }}</span></p>
+              </div>
+              <div class="feedback-item">
+                  <i class="fas fa-thumbs-up fa-2x"></i>
+                  <p>Good Ratings (5): <span>{{ goodCount }}</span></p>
+              </div>
+          </div>
+      </div>
+      
+        <!-- Weather Chart Section -->
+        <div class="section">
+          <h2>Weather Data Averages</h2>
+          <div class="chart-container">
+              <canvas id="weatherChart" width="auto" height="150"></canvas>
+          </div>
+      </div>      
+      </div>
+    </div>
+  </main>
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

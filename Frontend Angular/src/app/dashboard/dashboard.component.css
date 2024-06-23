@@ -1,0 +1,146 @@
+.map-container {
+  height: 600px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.card {
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Custom Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+.card {
+  border: 1px solid #ddd;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://i.pinimg.com/564x/82/7e/e3/827ee3e834d1d9fb76b4fc94e448ec7b.jpg') ;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.navbar {
+  background-color: #060807; /* Green navbar */
+}
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: 500;
+  padding-right: 20px;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo::before {
+  content: "\f0c2"; /* Unicode for cloud icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 28px;
+  color: #337ab7;
+  margin-right: 10px;
+}
+
+.container{
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(195, 193, 193, 0.5); /* grey with 50% transparency */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(128, 128, 128, 0.5); /* grey with 50% transparency */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  width: 50%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+
+.footer {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #ccc;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise and Sunset Times</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons -->
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://i.pinimg.com/564x/82/7e/e3/827ee3e834d1d9fb76b4fc94e448ec7b.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .navbar {
+            background-color: #060807; /* Green navbar */
+        }
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: 500;
+            padding-right: 20px;
+        }
+        .sunrise-container, .sunset-container, .solar-noon-container, .day-length-container {
+            background-color: rgba(41, 39, 39, 0.5); /* White background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: zoomIn 0.5s ease-out; /* Zoom in animation */
+        }
+        .text-light {
+            color: #000000; /* Black text */
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: rgba(128, 128, 128, 0.5); /* grey with 50% transparency */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: rgba(128, 128, 128, 0.5); /* grey with 50% transparency */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .close-btn {
+            color: #03070a; /* Gray color for close button */
+            cursor: pointer;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        .close-btn:hover {
+            color: #343a40; /* Dark gray on hover */
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .logo {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .logo::before {
+            content: "\f0c2"; /* Unicode for cloud icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 28px;
+            color: #337ab7;
+            margin-right: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a href="#" class="navbar-brand logo">Weather Now</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="sunrise-sunset"><i class="material-icons">wb_sunny</i> Sunrise and Sunset</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites"><i class="material-icons">favorite</i> Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard"><i class="material-icons">map</i> Climate Map</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center mb-4 p-4 text-light" style="background-color: rgba(41, 39, 39, 0.5); border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+            Sunrise and Sunset Times
+        </h1>
+        <div class="d-flex align-items-center justify-content-center mb-4 mt-4">
+            <input [(ngModel)]="location" class="form-control w-50 me-2" placeholder="Enter location" />
+            <button class = "btn" style=" background-color: black;  color: white;" (click)="onSubmit()">Get Sunrise-Sunset </button>
+        </div>
+
+        
+        <div *ngIf="sunriseSunsetData" class="card">
+            <h2 class="mb-4 text-center text-light">Sunrise and Sunset Times for {{ location }}</h2>
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="sunrise-container text-center text-light">
+                        <p class="display-4"><i class="material-icons">wb_sunny</i> Sunrise Time</p>
+                        <p class="lead">{{ sunriseSunsetData.results.sunrise }}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sunset-container text-center text-light">
+                        <p class="display-4"><i class="material-icons">wb_sunny</i> Sunset Time</p>
+                        <p class="lead">{{ sunriseSunsetData.results.sunset }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="solar-noon-container text-center text-light">
+                        <p class="display-4"><i class="material-icons">access_time</i> Solar Noon</p>
+                        <p class="lead">{{ sunriseSunsetData.results.solar_noon }}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="day-length-container text-center text-light">
+                        <p class="display-4"><i class="material-icons">schedule</i> Day Length</p>
+                        <p class="lead">{{ sunriseSunsetData.results.day_length }} mins</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Go Back button -->
+            <div class="text-center mt-4">
+                <button (click)="goBack()" class="btn btn-secondary" style=" background-color: black;  color: white;"><i class="material-icons">arrow_back</i> Go Back</button>
+            </div>
+            <!-- Close button -->
+            <div class="text-right mt-4">
+                <span class="close-btn" (click)="closeCard()">
+                    <i class="material-icons">close</i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

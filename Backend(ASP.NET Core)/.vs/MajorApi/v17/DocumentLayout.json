@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.NET\\28-05-2024\\MajorApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\model\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\model\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\controllers\\weatherdatumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\controllers\\weatherdatumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\model\\whetherdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\model\\whetherdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\migrations\\whetherdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\migrations\\whetherdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618105434_AddTimestampToFeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MajorApi\\Migrations\\20240618105434_AddTimestampToFeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618105103_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MajorApi\\Migrations\\20240618105103_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618104915_AddTimestampToFeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MajorApi\\Migrations\\20240618104915_AddTimestampToFeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|d:\\asp.net\\28-05-2024\\majorapi\\majorapi\\majorapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{50C1CDAB-279E-48B9-8233-FA8E97EEF795}|MajorApi\\MajorApi.csproj|solutionrelative:majorapi\\majorapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FeedbacksController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\FeedbacksController.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Controllers\\FeedbacksController.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\FeedbacksController.cs",
+              "RelativeToolTip": "MajorApi\\Controllers\\FeedbacksController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwDIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T10:41:32.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherDatumsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\WeatherDatumsController.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Controllers\\WeatherDatumsController.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\WeatherDatumsController.cs",
+              "RelativeToolTip": "MajorApi\\Controllers\\WeatherDatumsController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA1wCQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T12:33:04.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Program.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Program.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Program.cs",
+              "RelativeToolTip": "MajorApi\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:16:35.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WhetherDbContext.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Model\\WhetherDbContext.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Model\\WhetherDbContext.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Model\\WhetherDbContext.cs",
+              "RelativeToolTip": "MajorApi\\Model\\WhetherDbContext.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAIwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:25:21.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Model\\Feedback.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Model\\Feedback.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Model\\Feedback.cs",
+              "RelativeToolTip": "MajorApi\\Model\\Feedback.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T12:10:10.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Model\\User.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Model\\User.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Model\\User.cs",
+              "RelativeToolTip": "MajorApi\\Model\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T07:06:50.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "MajorApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAcwFoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:27:09.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\AdminsController.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Controllers\\AdminsController.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Controllers\\AdminsController.cs",
+              "RelativeToolTip": "MajorApi\\Controllers\\AdminsController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T12:46:22.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WhetherDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\WhetherDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Migrations\\WhetherDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\WhetherDbContextModelSnapshot.cs",
+              "RelativeToolTip": "MajorApi\\Migrations\\WhetherDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T11:07:43.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\appsettings.json",
+              "RelativeDocumentMoniker": "MajorApi\\appsettings.json",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\appsettings.json",
+              "RelativeToolTip": "MajorApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAACbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-17T07:11:04.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240618105434_AddTimestampToFeedback.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618105434_AddTimestampToFeedback.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Migrations\\20240618105434_AddTimestampToFeedback.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618105434_AddTimestampToFeedback.cs",
+              "RelativeToolTip": "MajorApi\\Migrations\\20240618105434_AddTimestampToFeedback.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T10:54:35.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240618105103_InitialCreate.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618105103_InitialCreate.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Migrations\\20240618105103_InitialCreate.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618105103_InitialCreate.cs",
+              "RelativeToolTip": "MajorApi\\Migrations\\20240618105103_InitialCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T10:51:03.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20240618104915_AddTimestampToFeedback.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618104915_AddTimestampToFeedback.cs",
+              "RelativeDocumentMoniker": "MajorApi\\Migrations\\20240618104915_AddTimestampToFeedback.cs",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\Migrations\\20240618104915_AddTimestampToFeedback.cs",
+              "RelativeToolTip": "MajorApi\\Migrations\\20240618104915_AddTimestampToFeedback.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T10:49:15.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MajorApi.http",
+              "DocumentMoniker": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\MajorApi.http",
+              "RelativeDocumentMoniker": "MajorApi\\MajorApi.http",
+              "ToolTip": "D:\\ASP.NET\\28-05-2024\\MajorApi\\MajorApi\\MajorApi.http",
+              "RelativeToolTip": "MajorApi\\MajorApi.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-06-17T07:10:59.579Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

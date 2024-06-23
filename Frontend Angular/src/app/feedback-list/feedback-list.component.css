@@ -1,0 +1,35 @@
+.logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo::before {
+    content: "\f0c2"; /* Unicode for cloud icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 28px;
+    color: #337ab7;
+    margin-right: 10px;
+}
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+.navbar {
+    background-color: #343a40 !important;
+    padding: 14px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar-toggler {
+    border: none;
+}

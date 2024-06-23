@@ -1,0 +1,23 @@
+.container-fluid{
+    height: 100vh;
+    overflow-y: auto;
+}
+.logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo::before {
+    content: "\f0c2"; /* Unicode for cloud icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 28px;
+    color: #337ab7;
+    margin-right: 10px;
+}

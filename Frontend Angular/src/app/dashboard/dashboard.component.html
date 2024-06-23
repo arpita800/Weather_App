@@ -1,0 +1,96 @@
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="#" class="navbar-brand logo">
+               Weather Now
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="sunrise-sunset"><mat-icon>wb_sunny</mat-icon> Sunrise and Sunset</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites"><mat-icon>favorite</mat-icon> Favorites</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard"><mat-icon>map</mat-icon> Climate Map</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button (click)="navigateToFeedback()" class="btn btn-link nav-link"><mat-icon>feedback</mat-icon> Give Us Feedback</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="card p-4 mb-4" style="background-color: white;">
+            <h1 class="text-center mb-4">Climate Map of the World</h1>
+
+            <div class="d-flex justify-content-center">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter city name" #cityInput>
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="button" (click)="searchCity(cityInput.value)" style="background-color: black; color: white;">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Map and layers section -->
+        <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <div id="map" class="map-container shadow-sm"></div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card bg-light p-3 rounded shadow-sm mb-4">
+                    <h2 class="mb-3">Map Layers</h2>
+                    <div class="list-group">
+                        <button class="list-group-item list-group-item-action" (click)="switchLayer('temp_new')">
+                            <mat-icon>wb_sunny</mat-icon> Temperature
+                        </button>
+                        <button class="list-group-item list-group-item-action" (click)="switchLayer('precipitation_new')">
+                            <mat-icon>opacity</mat-icon> Precipitation
+                        </button>
+                        <button class="list-group-item list-group-item-action" (click)="switchLayer('clouds_new')">
+                            <mat-icon>cloud</mat-icon> Cloud Coverage
+                        </button>
+                        <button class="list-group-item list-group-item-action" (click)="switchLayer('wind_new')">
+                            <mat-icon>waves</mat-icon> Wind Speed
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card bg-light p-3 rounded shadow-sm mb-4">
+                    <ul class="list-unstyled">
+                        <li *ngFor="let item of legend" class="mb-2">
+                            <span [style.background-color]="item.color" class="legend-color mr-2"></span> {{ item.label }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather details section -->
+        <div class="card bg-light p-3 rounded shadow-sm mb-4" *ngIf="weatherData">
+            <h2 class="mb-3">Weather Details for {{ weatherData.name }}</h2>
+            <ul class="list-unstyled">
+                <li><strong>Temperature:</strong> {{ weatherData.main.temp }} °C</li>
+                <li><strong>Humidity:</strong> {{ weatherData.main.humidity }} %</li>
+                <li><strong>Wind Speed:</strong> {{ weatherData.wind.speed }} m/s</li>
+                <li><strong>Conditions:</strong> {{ weatherData.weather[0].description }}</li>
+            </ul>
+        </div>
+
+        <!-- Go Back button -->
+        <div class="text-center">
+            <button (click)="goBack()" class="btn btn-primary btn-lg" style="background-color: black; color: white;">Go Back</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Weather Now. All rights reserved.</p>
+    </footer>
+</body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="#" class="logo">Weather Now</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="sunrise-sunset">
+                            <i class="fas fa-sun"></i> Sunrise and Sunset
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites">
+                            <i class="fas fa-heart"></i> Favorites
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard">
+                            <i class="fas fa-map"></i> Climate Map
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="weather-app">
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <input [(ngModel)]="location" class="form-control w-50 me-2" placeholder="Enter location" />
+                <button (click)="onSubmit()" class="btn btn-primary me-2">Get Weather</button>
+                <button (click)="addFavorite()" class="btn btn-success" [disabled]="isFavorite(location)">Add to Favorites</button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="weather-details">
+                        <h2 class="mb-4 text-center">Weather for {{ location }}</h2>
+                        <p class="mb-2"><strong><i class="fas fa-temperature-high"></i>Temperature:</strong> 
+                            <input type="text"  [(ngModel)]=" weatherData.main.temp" name="Temperature" class="form-control">°C</p>
+                        <p class="mb-2"><strong><i class="fas fa-tint"></i></strong> Humidity: 
+                         <input type="text"  [(ngModel)]="weatherData.main.humidity" name="Humidity" class="form-control">% </p>
+                        <p class="mb-2"><strong><i class="fas fa-wind"></i></strong> Wind Speed: 
+                        <input type="text" [(ngModel)]="weatherData.wind.speed" name="WindSpeed" class="form-control"> m/s </p>
+                    </div>
+                </div>
+            
+                    <div class="col-md-6">
+                        <app-map [latitude]="weatherData.coord.lat" [longitude]="weatherData.coord.lon"></app-map>
+                    </div>
+            </div>
+
+            <div class="card p-4 mt-4 weather-forecast ">
+                <h2 class="mb-4">Weather Forecast for the Next 5 Days</h2>
+                <div class="row">
+                    <div *ngFor="let forecast of forecastData" class="col-md-2 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ getDateFromTimestamp(forecast.dt) | date: 'EEE' }}</h5>
+                                <img class="weather-icon" [src]="getWeatherIconUrl(forecast.weather[0].icon)" alt="Weather Icon">
+                                <p class="mb-2"><strong><i class="fas fa-temperature-high"></i></strong> Temperature: {{ forecast.main.temp }}°C</p>
+                                <p class="mb-2"><strong><i class="fas fa-tint"></i></strong> Humidity: {{ forecast.main.humidity }}%</p>
+                                <p class="mb-2"><strong><i class="fas fa-wind"></i></strong> Wind Speed: {{ forecast.wind.speed }} m/s</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Weather Now. All rights reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

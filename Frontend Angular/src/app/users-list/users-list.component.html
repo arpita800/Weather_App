@@ -1,0 +1,41 @@
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <a href="#" class="logo">Weather Now Admin</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/admin">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+<div *ngIf="users.length > 0" class="section">
+    <h2>Users</h2>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <!-- You can add more columns here as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.userId }}</td>
+          <td>{{ getUserName(user.email) }}</td>
+          <td>{{ user.email }}</td>
+          <!-- Add more columns as needed -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="users.length === 0" class="no-data">
+    <p>No users found.</p>
+  </div>
+</body>

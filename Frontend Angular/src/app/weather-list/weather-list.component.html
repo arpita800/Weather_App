@@ -1,0 +1,51 @@
+<body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="#" class="logo">Weather Now Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/admin">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+    <div *ngIf="weatherData.length > 0" class="section">
+      <h2>Weather Data</h2>
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Email <i class="fas fa-envelope"></i></th>
+            <th>Location <i class="fas fa-map-marker-alt"></i></th>
+            <th>Temperature <i class="fas fa-thermometer-half"></i></th>
+            <th>Humidity <i class="fas fa-tint"></i></th>
+            <th>Wind Speed <i class="fas fa-wind"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of weatherData">
+            <td>{{ data.email }}</td>
+            <td>{{ data.location }}</td>
+            <td>{{ data.temperature }}°C</td>
+            <td>{{ data.humidity }}%</td>
+            <td>{{ data.windSpeed }} m/s</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="weatherData.length === 0" class="no-data">
+      <p>No weather data found.</p>
+    </div>
+  
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+  
